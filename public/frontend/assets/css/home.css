@@ -1,0 +1,539 @@
+/* h-skill Component Styles */
+
+/* Reset the bold font weight for body text */
+
+.h-custom-hero-area {
+    width: 100%;
+    padding: 100px 20px;
+    color: #333;
+    display: flex;
+    align-items: center;
+}
+
+.h-custom-container {
+    max-width: 1200px;
+    margin: 3rem 0;
+    display: flex
+;
+    flex-wrap: wrap;
+}
+
+.h-custom-column {
+    flex: 1 1 50%;
+    padding: 20px;
+}
+
+.h-banner-text-wrapper {
+    padding-bottom: 80px;
+}
+
+.h-mini-words span {
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #666;
+}
+
+
+.h-landing-come-area {
+    border-bottom: 1px solid var(--heading-neutral-border-2);
+    color: var(--heading-neutral-2);
+    padding-bottom: 6px;
+    margin-bottom: 16px;
+}
+
+.h-come-for-learn-text {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 154.5%;
+    letter-spacing: 0.89em;
+    color: rgba(255, 255, 255, 0.55);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.17);
+    width: 59%;
+    margin-bottom: 30px;
+}
+
+
+.h-banner-title {
+    font-size: 48px;
+    font-weight: bold;
+    margin: 20px 0;
+    line-height: 1.2;
+}
+
+.h-banner-subtitle {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+.h-button-group {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.h-btn {
+    padding: 12px 24px;
+    font-size: 16px;
+    text-decoration: none;
+    border-radius: 4px;
+    display: inline-flex;
+    align-items: center;
+    transition: all ease 0.3s;
+}
+
+.h-primary-btn {
+    background-color: #007BFF;
+    color: white;
+}
+
+.h-primary-btn:hover {
+    background-color: #0056b3;
+}
+
+.h-secondary-btn {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.h-secondary-btn:hover {
+    background-color: #ddd;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Example: Specific elements like paragraphs in home page */
+.home__description {
+    font-weight: normal; /* If you don't want bold text on specific sections */
+}
+
+/* If you want to set a custom font style for the home page */
+.home__title {
+    font-weight: 700; /* Bold title */
+    font-size: 2rem;
+    color: #1a202c;
+}
+
+.home__description {
+    font-weight: 400; /* Regular font weight for description */
+    font-size: 1rem;
+    color: #718096; /* Lighter text color */
+}
+
+.h-skill-bg {
+    background-color: #414141;
+    color: white;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.h-skill-padding {
+    padding-top: 10rem;
+    padding-bottom: 12rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.h-skill-container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.h-skill-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.h-skill-text-left {
+    text-align: left;
+}
+
+.h-skill-title {
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+.h-skill-description {
+    margin-top: 1rem;
+    color: #b3b3b3;
+}
+
+.h-skill-image-hidden {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .h-skill-image-hidden {
+        display: block;
+    }
+}
+
+.h-skill-courses {
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+}
+
+@media (min-width: 768px) {
+    .h-skill-courses {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .h-skill-courses {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Course Card */
+.h-skill-card {
+    border: 1px solid #fff;
+    padding: 2rem;
+    text-align: left;
+    margin-top: 1rem;
+}
+
+.h-skill-card-icon {
+    margin-bottom: 1.5rem;
+}
+
+.h-skill-card-icon-img {
+    height: 2.5rem;
+}
+
+.h-skill-card-title {
+    font-size: 1.25rem;
+    font-weight: 400;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    color: var(--bs-white);
+}
+
+.h-skill-card-description {
+    font-size: 0.875rem;
+    line-height: 2.5rem;
+    color: #b3b3b3;
+}
+
+.h-skill-card-link {
+    display: flex;
+    justify-content: left;
+    gap: 0.75rem;
+    align-items: center;
+    margin-top: 1rem;
+    color: #fff;
+    text-decoration: none;
+}
+
+.h-skill-card-chevron {
+    height: 1rem;
+}
+
+/* View More Button */
+.h-skill-view-more {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+.h-skill-view-more-btn {
+    background-color: #fbbf24;
+    color: black;
+    padding: 1rem 1.5rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.h-skill-view-more-btn:hover {
+    background-color: #f59e0b;
+}
+
+.h-skill-chevron {
+    height: 1rem;
+}
+
+/* BEM Naming Convention Styles for Home Page */
+/* BEM Naming Convention Styles for h-cta1 Block */
+
+/* Main Section */
+.h-cta1 {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+.h-cta1__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    align-items: center;
+    background-color: #f7fafc;
+}
+
+.h-cta1__image {
+    width: 100%;
+}
+
+.h-cta1__image--img {
+    width: 100%;
+}
+
+.h-cta1__content {
+    padding: 0 1rem;
+}
+
+.h-cta1__title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1a202c;
+}
+
+.h-cta1__description {
+    margin-top: 1rem;
+    font-size: 1rem;
+    color: #718096;
+}
+
+.h-cta1__button {
+    margin-top: 1.5rem;
+    padding: 1rem 1.5rem;
+    background-color: #fbbf24;
+    color: black;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.h-cta1__button:hover {
+    background-color: #eab308;
+}
+
+.h-cta1__icon {
+    height: 1rem;
+}
+
+/* Partners Section */
+.h-cta1__partners {
+    margin-top: 4rem;
+}
+
+.h-cta1__partners-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1a202c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.h-cta1__partners-icon {
+    width: 1.5rem;
+}
+
+.h-cta1__partners-logos {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.h-cta1__partner-logo {
+    height: 3.5rem;
+}
+
+/* Main Section */
+.home__section--main {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+.home__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+    background-color: #f7fafc;
+}
+
+.home__image {
+    width: 100%;
+}
+
+.home__image--img {
+    width: 100%;
+}
+
+.home__content {
+    padding: 0 1rem;
+}
+
+.home__title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1a202c;
+}
+
+.home__description {
+    margin-top: 1rem;
+    font-size: 1rem;
+    color: #718096;
+}
+
+.home__cta-btn {
+    margin-top: 1.5rem;
+    padding: 1rem 1.5rem;
+    background-color: #fbbf24;
+    color: black;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.home__cta-btn:hover {
+    background-color: #eab308;
+}
+
+.home__cta-icon {
+    height: 1rem;
+}
+
+/* Partners Section */
+.home__partners {
+    margin-top: 4rem;
+}
+
+.home__partners-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1a202c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home__partners-icon {
+    width: 1.5rem;
+}
+
+.home__partners-logos {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.home__partner-logo {
+    height: 3.5rem;
+}
+
+/* Call to Action Section */
+.home__cta-section {
+    margin: 16px 0 0 10px;
+
+    padding: 40px 5px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.home__cta-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1a202c;
+}
+
+.home__cta-description {
+    margin-top: 1rem;
+    font-size: 1rem;
+    color: #718096;
+}
+
+.home__cta-btn-container {
+    margin-top: 2rem;
+}
+
+.home__cta-btn {
+    padding: 1rem 1.5rem;
+    background-color: #fbbf24;
+    color: black;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.home__cta-btn:hover {
+    background-color: #eab308;
+}
+
+.home__cta-icon {
+    height: 1rem;
+}
+
+/* Tablet and below */
+@media (max-width: 1024px) {
+    .home__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .home__partners-logos {
+        gap: 1rem;
+    }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+    .home__grid {
+        gap: 1.5rem; /* Smaller gap on small screens */
+    }
+    .home__partner-logo {
+        height: 2.5rem;
+    }
+    .h-custom-hero-area {
+    padding: 10px 20px;
+    }
+}
+
+/* Small Mobile (optional) */
+@media (max-width: 480px) {
+    .home__grid {
+        gap: 1rem;
+    }
+}

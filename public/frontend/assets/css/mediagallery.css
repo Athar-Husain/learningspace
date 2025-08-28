@@ -1,0 +1,437 @@
+/* General Styling & Fonts (Ensure your main app.css or theme css handles these) */
+body {
+    /* Or your preferred font */
+    color: #333;
+    line-height: 1.6;
+    background-color: #f8f9fa; /* Light background for the page */
+}
+
+
+
+/* Gallery Section - Overall Container */
+.gallery {
+    margin: 0 auto; /* More margin top/bottom */
+    padding:4rem 2rem; /* Consistent padding on sides */
+}
+
+/* Gallery Header Section */
+.gallery__header {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    align-items: center;
+    gap: 3rem; /* Increased gap for better separation */
+    margin-bottom: 4rem; /* More space below the header section */
+    background-color: #fff;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); /* Soft shadow */
+    overflow: hidden; /* For rounded corners */
+}
+
+.gallery__header-text {
+    flex: 1;
+    min-width: 300px; /* Ensures text doesn't get too narrow */
+}
+
+.gallery__header-subtitle {
+    font-size: 1rem;
+    color: #1abc9c; /* Theme color */
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+
+.gallery__header-title {
+    font-size: 2.8rem; /* Larger, more impactful title */
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    color: #2c3e50; /* Darker text for contrast */
+}
+
+.gallery__header-description {
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.8;
+}
+
+.gallery__header-image {
+    flex: 1.2; /* Image takes slightly more space */
+    min-width: 400px; /* Ensures image doesn't get too small */
+    position: relative;
+    padding: 1rem; /* Padding for the inner border effect */
+    background-color: #f0f0f0; /* Background for the image container */
+    border-radius: 10px;
+}
+
+.gallery__header-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 3px solid rgba(26, 188, 156, 0.4); /* Border inside the image area */
+    border-radius: 10px;
+    pointer-events: none; /* Allows clicks to pass through */
+    transform: scale(0.95); /* Slightly smaller inner border */
+}
+
+
+.gallery__header-img {
+    width: 100%;
+    height: auto; /* Allow image to scale naturally */
+    aspect-ratio: 16/9; /* Maintain aspect ratio */
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.gallery__header-img:hover {
+    transform: scale(1.02);
+}
+
+
+/* General Image Styles for all Gallery Images */
+.gallery__image-img,
+.gallery__image-large-img,
+.gallery__grid-img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px; /* Slightly more rounded corners */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Consistent shadow */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.gallery__image-img:hover,
+.gallery__image-large-img:hover,
+.gallery__grid-img:hover {
+    transform: translateY(-5px) scale(1.01); /* Subtle lift and slight zoom */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15); /* More pronounced shadow on hover */
+}
+
+
+/* Image Gallery - Three Columns */
+.gallery__images {
+       display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    justify-content: space-evenly;
+}
+
+.gallery__image-img {
+    height: 250px; /* Slightly increased height */
+}
+
+/* Large Single Image Section */
+.gallery__image-large {
+    margin: 3rem 0; /* More vertical spacing */
+}
+
+.gallery__image-large-img {
+    height: 500px; /* Increased height for impact */
+}
+
+/* ---------------------------------------------------------------------- */
+/* Grid Gallery Section - NEW HTML STRUCTURE */
+/* ---------------------------------------------------------------------- */
+.gallery__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns by default */
+    gap: 2rem; /* Gap between the left and right main sections */
+    margin-bottom: 4rem;
+}
+
+.gallery__grid__left {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns within the left section */
+    gap: 1.5rem; /* Gap between the two internal columns */
+}
+
+.ggl-col1, .ggl-col2 {
+    display: flex;
+    flex-direction: column; /* Stack images vertically within each sub-column */
+    gap: 1.5rem; /* Gap between images in these columns */
+}
+
+.ggl-col1-img1, .ggl-col1-img2 {
+    /* These wrappers might not need specific height, let images define it */
+    /* If you want specific aspect ratios or fixed heights, apply them to the img */
+}
+
+
+.gallery__grid__right {
+    display: flex;
+    flex-direction: column; /* Stack rows vertically within the right section */
+    gap: 1.5rem; /* Gap between row1 and row2 */
+}
+
+.ggr-row1 {
+    /* Holds the single large image */
+}
+
+.ggr-row2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns for the bottom row */
+    gap: 1.5rem; /* Gap between these two images */
+}
+
+.gallery__grid-img {
+    /* Common styling applied earlier for all gallery__grid-img */
+    height: 320px; /* Default height for grid images */
+}
+
+/* Adjust specific image heights within the new grid structure for visual balance */
+.ggl-col1-img1 .gallery__grid-img,
+.ggl-col2 .ggl-col1-img2 .gallery__grid-img {
+    height: 450px; /* Taller images in left grid for visual variety */
+}
+
+.ggl-col1-img2 .gallery__grid-img,
+.ggl-col2 .ggl-col1-img1 .gallery__grid-img {
+    height: 250px; /* Shorter images in left grid */
+}
+
+.ggr-row1 .gallery__grid-img {
+    height: 380px; /* Adjust height for the large image in the right section */
+}
+
+
+/* ---------------------------------------------------------------------- */
+/* MODAL CSS - Mostly carried over, minor tweaks for aesthetics */
+/* ---------------------------------------------------------------------- */
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.85); /* Slightly darker overlay */
+    z-index: 1000;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.modal.flex {
+    display: flex;
+    opacity: 1;
+    visibility: visible;
+}
+
+#modalImg {
+    max-width: 90%;
+    max-height: 90vh; /* Allow it to be taller */
+    object-fit: contain;
+    border-radius: 8px; /* Slightly rounded corners for modal image */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Stronger shadow for modal image */
+}
+
+.modal__nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 3.5rem; /* Larger arrows */
+    color: rgba(255, 255, 255, 0.7); /* Subtle white */
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 15px 20px; /* More padding */
+    outline: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.modal__nav:hover {
+    color: #fff; /* Bright white on hover */
+    transform: translateY(-50%) scale(1.1); /* Subtle scale effect */
+}
+
+.modal__nav--prev {
+    left: 20px; /* Further from edge */
+}
+
+.modal__nav--next {
+    right: 20px; /* Further from edge */
+}
+
+.modal__close {
+    position: absolute;
+    top: 20px; /* Further from edge */
+    right: 20px;
+    font-size: 3.5rem; /* Larger close button */
+    color: rgba(255, 255, 255, 0.7);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    outline: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.modal__close:hover {
+    color: #fff;
+    transform: rotate(90deg); /* Spin effect on hover */
+}
+
+/* 'hidden' class should typically not be used on the modal itself with this setup */
+.hidden {
+    display: none !important;
+}
+
+/* ---------------------------------------------------------------------- */
+/* RESPONSIVENESS */
+/* ---------------------------------------------------------------------- */
+
+
+@media (min-width: 1024px) {
+    .gallery__image-img {
+        height: 218px;
+    }
+
+}
+
+/* Large devices (desktops, 992px and up) - No specific changes needed, defaults apply */
+@media (min-width: 992px) {
+    /* Styles for larger desktops can go here if needed */
+}
+
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 577px) and (max-width: 991px) {
+    .gallery__header {
+        /* flex-direction: column; */
+        gap: 2.5rem;
+    }
+    .gallery__header-image {
+        min-width: 400px;
+    }
+    .gallery__images {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Allow 2-3 columns */
+    }
+    .gallery__grid {
+        grid-template-columns: 1fr; /* Single column for the entire grid on tablets */
+        gap: 2rem;
+    }
+    .gallery__grid__left {
+        grid-template-columns: 1fr 1fr; /* Keep 2 columns within left section if enough space */
+    }
+    .ggl-col1, .ggl-col2 {
+        flex-direction: column; /* Stack images in sub-columns */
+    }
+    .gallery__grid__right {
+        flex-direction: column;
+    }
+    .ggr-row2 {
+        grid-template-columns: 1fr 1fr; /* Keep two columns for bottom right images */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Small devices (phones, 576px and down) */
+@media (max-width: 576px) {
+    .page-banner-heading {
+        font-size: 2rem;
+    }
+    .gallery {
+        padding: 2rem 1rem;
+        margin: 0 auto;
+    }
+    .gallery__header {
+        flex-direction: column;
+        gap: 2rem;
+        padding: 1.5rem;
+    }
+    .gallery__header-title {
+        font-size: 2rem;
+    }
+    .gallery__header-image {
+        min-width: unset; /* Remove min-width for very small screens */
+    }
+    .gallery__images {
+        grid-template-columns: 1fr; /* Single column on very small screens */
+        gap: 1rem;
+    }
+
+    /* Grid layout for small screens */
+    .gallery__grid {
+        grid-template-columns: 1fr; /* Single column for the entire grid */
+        gap: 1.5rem;
+    }
+
+    .gallery__grid__left {
+        grid-template-columns: 1fr; /* Stack left columns */
+        gap: 1rem;
+    }
+
+    .ggl-col1, .ggl-col2 {
+        flex-direction: row; /* Make sub-columns row-based for better mobile display */
+        flex-wrap: wrap; /* Allow wrapping of images within the row */
+        justify-content: center; /* Center images if they don't fill the row */
+        gap: 1rem; /* Gap between images in the row */
+    }
+
+    .gallery__grid__right {
+        gap: 1rem;
+    }
+
+    .ggr-row2 {
+        grid-template-columns: 1fr; /* Stack the two bottom right images */
+        gap: 1rem;
+    }
+
+    .gallery__image-img,
+    .gallery__image-large-img,
+    .gallery__grid-img {
+        height: auto; /* Allow natural height, or set a max-height */
+        aspect-ratio: 4/3; /* Common aspect ratio for mobile images */
+    }
+    /* Reset specific heights for mobile to use aspect-ratio */
+    .ggl-col1-img1 .gallery__grid-img,
+    .ggl-col2 .ggl-col1-img2 .gallery__grid-img,
+    .ggl-col1-img2 .gallery__grid-img,
+    .ggl-col2 .ggl-col1-img1 .gallery__grid-img,
+    .ggr-row1 .gallery__grid-img {
+        height: auto;
+    }
+
+
+    .modal__nav, .modal__close {
+        font-size: 2.5rem; /* Smaller icons for mobile modal */
+        padding: 8px 12px;
+    }
+    .modal__nav--prev {
+        left: 5px;
+    }
+    .modal__nav--next {
+        right: 5px;
+    }
+    .modal__close {
+        top: 10px;
+        right: 10px;
+    }
+}
+
+
+
+
+
+

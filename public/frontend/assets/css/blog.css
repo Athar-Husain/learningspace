@@ -1,0 +1,7 @@
+.blogs-hero-image {
+    height: 600px;
+    background-image: url('../img/gallery/13.png'); 
+    background-size: cover; 
+    background-position: center center; 
+    background-repeat: no-repeat; 
+}

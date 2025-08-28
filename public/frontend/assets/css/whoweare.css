@@ -1,0 +1,448 @@
+/* Hero Section */
+.hero-section {
+    position: relative;
+    height: 650px;
+    overflow: hidden;
+}
+
+.hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-position: center;
+}
+
+.info-section-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info-section {
+    margin: 20px 0;
+    padding: 20px;
+}
+
+.vision-content {
+    padding: 20px 10px;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 10;
+    padding: 0 15px;
+}
+
+.hero-subtitle {
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.wwr-hero-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+/* Section Titles */
+.wwr-section-title {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+.re-csection-title {
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+.v-section-title{
+    font-size: 2rem;
+     font-weight: 400;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+.subsection-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #444;
+}
+
+.section-description {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+.diff-section-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Button Styles */
+.btn-primary {
+    background-color: #f5b300;
+    border-color: #f5b300;
+}
+
+.btn-primary:hover {
+    background-color: #f5a500;
+    border-color: #f5a500;
+}
+
+/* Impact Section */
+.impact-number {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.impact-label {
+    font-size: 1.2rem;
+    color: #ccc;
+}
+
+/* Card Styles */
+.difference-card,
+.card-description {
+    padding: 1rem;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+
+/* Impact Section Styling */
+.impact-section {
+    background-color: #333;
+    color: white;
+    padding: 4rem 2rem;
+}
+
+.impact-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.impact-s-title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #FFDD00;
+    margin-bottom: 1.5rem;
+}
+
+.impact-s-para {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #f0f0f0;
+    margin-bottom: 2rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.impact-s-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: space-between;
+    margin-top: 3rem;
+}
+
+.imp-s-card {
+    background-color: #444;
+    flex: 1 1 22%;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    /* transition: all 0.3s ease-in-out; */
+    transition: all 0.3s ease;
+}
+
+.imp-s-card:hover {
+    background-color: #FFDD00;
+    color: #333;
+    transform: translateY(-10px);
+}
+
+.imp-s-card i {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #FFDD00;
+}
+.imp-s-card:hover .imp-s-card i {
+    color: #ffffff;
+}
+
+.imp-s-card-card-counts {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 0.5rem;
+}
+
+.imp-s-card-card-title {
+    font-size: 1.1rem;
+    color: #d1d1d1;
+}
+
+.partnering-talents-section{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 20px;
+    gap: 2rem;
+    padding: 20px 10px;
+}
+
+
+.pt-section-right .ptsr{
+    /* width: 200px; */
+    height: 200px;
+
+}
+.ptsrdiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/* Main Grid Container */
+.custom-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* 6 columns */
+    gap: 16px; /* 4px gap */
+}
+
+/* Custom Grid Items */
+.custom-grid-item {
+    overflow: hidden;
+    position: relative;
+}
+
+/* Top Left Image */
+.custom-grid-item-top-left {
+    grid-column: span 3; /* Span 3 columns */
+    height: 200px; /* Reduced height for smaller images */
+}
+
+/* Top Right Image */
+.custom-grid-item-top-right {
+    grid-column: span 3; /* Span 3 columns */
+    height: 200px; /* Reduced height for smaller images */
+}
+
+/* Bottom Left Image */
+.custom-grid-item-bottom-left {
+    grid-column: span 2; /* Span 2 columns */
+    height: 200px; /* Reduced height for smaller images */
+}
+
+/* Bottom Right Image */
+.custom-grid-item-bottom-right {
+    grid-column: span 4; /* Span 4 columns */
+    height: 200px; /* Reduced height for smaller images */
+}
+
+/* Custom Image Styling */
+.custom-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the container while maintaining aspect ratio */
+}
+
+.pts-title{
+    font-size: 3rem;
+    font-weight: 500;
+}
+.pt-section-left{
+    padding: 0 10px 0 0;
+}
+/* Main Section Styling */
+.our-team-section {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    background-color: #f9fafb;
+}
+
+/* Section Title */
+.our-team-section h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #1f2937;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.our-team-section h2 span {
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 4rem;
+    height: 2px;
+    background-color: #f87171; /* Red accent */
+}
+
+/* Grid Styling */
+.our-team-section .grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1.5rem;
+}
+
+
+
+/* Individual Team Member Card */
+.our-team-section .bg-white {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.our-team-section .bg-white:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Team Image */
+.our-team-section .bg-white img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: opacity 0.3s ease;
+}
+
+.our-team-section .bg-white:hover img {
+    opacity: 0.8;
+}
+
+/* Team Member Name and Role */
+.our-team-section .flex {
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+}
+
+.our-team-section h3 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #1f2937;
+}
+
+.our-team-section p {
+    color: #4b5563;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Large devices (1024px and up) */
+@media (min-width: 1024px) {
+    .our-team-section .bg-white {
+        padding: 1.5rem;
+    }
+
+    .our-team-section h3 {
+        font-size: 1.5rem;
+    }
+
+    .our-team-section p {
+        font-size: 1rem;
+    }
+
+    .our-team-section .grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    }
+}
+
+/* Medium devices (992px and below) */
+@media (max-width: 992px) {
+    .imp-s-card {
+        flex: 1 1 45%; /* Adjust card width on medium screens */
+    }
+}
+
+/* Small devices (768px and below) */
+@media (max-width: 768px) {
+    .imp-s-card {
+        flex: 1 1 100%; /* Full width for cards */
+    }
+
+    .impact-s-title {
+        font-size: 2rem; /* Increase title font size */
+    }
+
+    .impact-s-para {
+        font-size: 1rem; /* Adjust paragraph font size */
+    }
+}
+
+/* Small to Medium devices (640px and up) */
+@media (min-width: 640px) {
+    .our-team-section .grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    }
+
+    .wwr-section-title {
+        font-size: 2rem; /* Adjust title font size */
+    }
+}
+
+/* Extra small devices (480px and below) */
+@media (max-width: 480px) {
+    .our-team-section h3 {
+        font-size: 1.2rem; /* Adjust heading font size for small screens */
+    }
+
+    .our-team-section p {
+        font-size: 0.9rem; /* Smaller paragraph font size */
+    }
+
+    /* Additional adjustments for very small screens */
+    .imp-s-card {
+        flex: 1 1 100%; /* Full-width cards on extra small devices */
+    }
+    .hero-section {
+    height: 500px;
+}
+}
+
+
+

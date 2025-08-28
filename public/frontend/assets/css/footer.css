@@ -1,0 +1,106 @@
+/* Custom Footer Styles */
+.custom-footer {
+    background-color: #f3f4f6; /* bg-gray-100 */
+    color: #1f2937; /* text-gray-900 */
+}
+
+.custom-footer .container {
+    max-width: 1200px; /* or you can use container classes from Tailwind */
+    margin: 0 auto;
+}
+
+.custom-footer .grid-cols-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.custom-footer h4 {
+    font-weight: 600; /* font-semibold */
+    margin-bottom: 0.5rem;
+}
+
+.custom-footer .text-sm {
+    font-size: 0.875rem; /* sm text size */
+}
+
+.custom-footer .space-y-2 > * {
+    margin-bottom: 0.5rem;
+}
+
+.custom-footer a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.custom-footer .hover\:underline:hover {
+    text-decoration: underline;
+}
+
+.custom-footer .text-gray-400 {
+    color: #9CA3AF;
+}
+
+.custom-footer .text-xs {
+    font-size: 0.75rem; /* xs text size */
+}
+
+.custom-footer img {
+    max-height: 3rem; /* .h-12 */
+    width: auto;
+}
+
+.custom-footer .flex {
+    display: flex;
+}
+
+.custom-footer .justify-between {
+    justify-content: space-between;
+}
+
+.custom-footer .justify-center {
+    justify-content: center;
+}
+
+.custom-footer .justify-end {
+    justify-content: flex-end;
+}
+
+.custom-footer .space-x-4 {
+    gap: 1rem;
+}
+
+.custom-footer .mt-4 {
+    margin-top: 1rem;
+}
+
+.custom-footer .my-6 {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.custom-footer .border-gray-300 {
+    border-color: #D1D5DB; /* light gray */
+}
+
+.custom-footer .text-gray-700 {
+    color: #4B5563;
+}
+
+.custom-footer .text-gray-700:hover {
+    color: #1F2937; /* dark gray on hover */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .custom-footer .md\:grid-cols-3 {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .custom-footer .md\:mt-0 {
+        margin-top: 0;
+    }
+
+    .custom-footer .md\:justify-end {
+        justify-content: flex-start;
+    }
+}
