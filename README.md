@@ -134,15 +134,73 @@ cp .env.example .env
 php artisan key:generate
 ```
 
-**Configure your `.env` file with database credentials and API keys.**
+**📝 Update your `.env` file:**
+```env
+# Essential Database Configuration
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=learningspace_db  # Must match your created database
+DB_USERNAME=root              # Your MySQL username
+DB_PASSWORD=                  # Your MySQL password (empty for XAMPP default)
 
-### Step 4: Database Setup
-```bash
-# Import the provided SQL file
-mysql -u your_username -p your_database_name < lslms.sql
+# Application Settings
+APP_NAME="Learning Space LMS"
+APP_ENV=local
+APP_DEBUG=true
+APP_URL=http://localhost:8000
 ```
 
-*Alternative: Use phpMyAdmin to import the `lslms.sql` file*
+> **⚠️ Critical:** The database name in `.env` must exactly match the database you created in Step 4!
+
+### Step 4: Database Setup
+
+> **🚨 CRITICAL:** Without proper database setup, the application will show a blank screen or crash!
+
+#### Option A: Using MySQL Command Line
+```bash
+# First, create your database
+mysql -u root -p
+CREATE DATABASE learningspace_db;
+EXIT;
+
+# Import the SQL file from root directory
+mysql -u root -p learningspace_db < lslms.sql
+```
+
+#### Option B: Using XAMPP/phpMyAdmin
+1. **Start XAMPP** and ensure MySQL is running
+2. **Open phpMyAdmin** (usually at `http://localhost/phpmyadmin`)
+3. **Create a new database** (e.g., `learningspace_db`)
+4. **Select the database** you just created
+5. **Click "Import" tab**
+6. **Choose File:** Browse and select `lslms.sql` from the **root directory** of the project
+7. **Click "Go"** to import
+
+#### Option C: Using MySQL Workbench
+1. **Open MySQL Workbench**
+2. **Connect** to your local MySQL server
+3. **Create Schema:** Right-click → Create Schema → Name it `learningspace_db`
+4. **Import:** Server → Data Import → Import from Self-Contained File
+5. **Select:** `lslms.sql` from the project **root directory**
+6. **Target Schema:** Select `learningspace_db`
+7. **Start Import**
+
+#### Update .env Database Connection
+```env
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=learningspace_db
+DB_USERNAME=root
+DB_PASSWORD=your_mysql_password
+```
+
+> **💡 Important Notes:**
+> - The `lslms.sql` file is located in the **root directory** of the project
+> - Database name in `.env` must match the database you created
+> - For XAMPP, default username is `root` with empty password
+> - Test connection: `php artisan migrate:status` should show tables
 
 ### Step 5: Set Permissions
 ```bash
@@ -164,12 +222,25 @@ npm run dev
 npm run production
 ```
 
-### Step 7: Launch Application
+### Step 7: Verify Installation
 ```bash
+# Start Laravel development server
 php artisan serve
+
+# Test database connection
+php artisan migrate:status
+
+# Clear any cached configurations
+php artisan config:clear
+php artisan cache:clear
 ```
 
 🌐 **Application URL:** [http://localhost:8000](http://localhost:8000)
+
+> **🔍 Troubleshooting:** If you see a blank screen, check:
+> - Database connection in `.env` is correct
+> - `lslms.sql` was imported successfully  
+> - PHP error logs: `tail -f storage/logs/laravel.log`
 
 ---
 
