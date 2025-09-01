@@ -190,7 +190,7 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
         Unicodeveloper\Paystack\PaystackServiceProvider::class,
-        Zainiklab\ZaiInstaller\Providers\ZaiInstallerServiceProvider::class
+        // Zainiklab\ZaiInstaller\Providers\ZaiInstallerServiceProvider::class
     ],
 
     /*

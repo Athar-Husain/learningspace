@@ -1,119 +1,197 @@
-# 🎓 Learning Space – LMS Web Application
+🎓 Learning Space – LMS Web Application
+Welcome to the Learning Space LMS platform. This is a custom-built Learning Management System developed for the Learning Space team to support online education with robust features including course management, student-tutor workflows, assessments, live classes, and integrations with video and payment APIs.
 
-Welcome to the **Learning Space** web application repository.
+🚀 Project Overview
+Multi-role user system: Admin, Tutor, Student
 
-This project is a custom-built **Learning Management System (LMS)** developed for the **Learning Space team**. It supports core LMS features including student management, tutor approvals, course uploads, quizzes, assessments, live classes, payments, and more.
+Tutor onboarding with admin approvals
+
+Course creation and media content upload (Wasabi integrated)
+
+Student dashboard & enrollments
+
+Quizzes and assessments
+
+Zoom-based live class management
+
+Integrated payment gateways (Razorpay, Stripe, PayPal, Paystack, Mollie, MercadoPago, etc.)
+
+Admin panel for full system control
+
+SCORM support for interactive learning content
+
+⚙️ Tech Stack
+Layer
+
+Stack
+
+Backend
+
+Laravel 9 (PHP 8.0+)
+
+Frontend
+
+Blade templates (with Bootstrap 5)
+
+Database
+
+MySQL
+
+Video
+
+Zoom API
+
+Storage
+
+Wasabi (via S3-compatible integration)
+
+Payments
+
+Multiple Gateways (Configurable)
+
+Realtime
+
+Laravel Echo + Pusher
+
+SCORM
+
+devianl2/laravel-scorm integration
+
+🧰 Local Setup Instructions
+Important: Before you begin, please copy the provided SQL file to your local machine.
+To get the project running locally, follow these simple steps:
+
+1. Clone the Repository
+git clone [https://github.com/Athar-Husain/learningspace.git](https://github.com/Athar-Husain/learningspace.git)
+cd learningspace
 
 
----
-
-### ✅ This file includes:
-- Everything your client needs to **understand, set up, and run** the app.
-- Specific instructions about using `lslms.sql` instead of migrations.
-- Clean structure without Laravel promo content.
-- No sensitive data.
-- Clear callout to contact you for support.
-
-Let me know if:
-- You want me to also provide a production deployment guide (e.g., Nginx/Apache setup).
-- You’d like to add screenshots, API endpoints, or user guides.
-
-Would you like this saved as a downloadable `.md` file?
-
----
-
-
-## 🚀 Features Overview
-
-- User roles: Admin, Tutor, Student
-- Tutor onboarding with admin approval
-- Course creation & content upload (by tutors)
-- Student enrollment & dashboard
-- Live classes via Zoom integration
-- Quiz & assessment modules
-- Payment system integration (configurable from admin)
-- Media storage integration with Wasabi
-- Admin panel to manage platform, users, settings
-
----
-
-## ⚙️ Tech Stack
-
-- **Backend**: Laravel (PHP)
-- **Frontend**: Blade (Laravel templating engine)
-- **Database**: MySQL
-- **Video/Live Classes**: Zoom API
-- **Storage**: Wasabi cloud storage
-- **Payments**: Custom Payment API (configurable via admin panel)
-
----
-
-## 🛠️ Getting Started (Local Setup)
-
-Follow the steps below to set up the project locally.
-
-### 1. Clone the Repository
-
-```bash
-git clone https://github.com/your-username/your-repo-name.git
-cd your-repo-name
-2. Install PHP & JS Dependencies
-bash
-Copy code
-composer install
+2. Install Dependencies
 npm install
-npm run dev
-3. Configure Environment
-Copy the example environment file:
+composer install
 
-bash
-Copy code
+
+3. Setup Environment File
 cp .env.example .env
-⚠️ Important: Do not run migrations immediately.
+
+
+Update your .env file with your local MySQL database credentials.
 
 4. Import the Database
-Inside the root of the project, you’ll find a file named lslms.sql
+Remember to import the pre-built SQL dump before running the app. The file, lslms.sql, is located at the root of the project. You can import it via phpMyAdmin or the MySQL CLI.
 
-Import this SQL file into your MySQL database manually (e.g., via phpMyAdmin or command line)
+mysql -u your_username -p your_database_name < lslms.sql
 
-Then, update the .env file with your database credentials to connect to the imported DB.
 
 5. Generate Application Key
-bash
-Copy code
 php artisan key:generate
-6. Serve the Application
-bash
-Copy code
+
+
+6. Run the Application
 php artisan serve
-The app will now be accessible at:
-📍 http://localhost:8000
-
-📂 Project Structure (Quick Overview)
-/app – Laravel app logic (Models, Controllers)
-
-/resources/views – Blade templates (Frontend views)
-
-/routes/web.php – Web routes
-
-/public – Public assets
-
-/database – Migrations and seeders (if needed)
-
-lslms.sql – ✅ Pre-configured database dump (import before running)
-
-🔐 Admin Panel
-The application includes a full-featured admin panel for:
-
-Managing tutors, students, and courses
-
-Controlling platform settings
-
-Configuring Zoom and Payment APIs
-
-Reviewing tutor applications
-
-No admin credentials are included in this README. Please refer to your internal documentation or contact the developer if needed.
 
 
+Visit your app at: 👉 http://localhost:8000
 
+🛠️ PHP & Node Requirements
+Requirement
+
+Version
+
+PHP
+
+Minimum: PHP 8.0.2<br>Recommended: PHP 8.1.x or 8.2.x
+
+Node.js
+
+>=14.x
+
+NPM
+
+>=6.x
+
+📦 Core Package Versions
+Package
+
+Version
+
+Laravel Framework
+
+^9.2
+
+Laravel Mix
+
+^6.0.6
+
+Bootstrap
+
+^5.1.3
+
+Vue.js
+
+^2.6.12
+
+Laravel Passport & Sanctum
+
+^11.8, ^2.14
+
+SCORM Integration
+
+^4.0
+
+Payment Packages
+
+Multi
+
+Zoom API Integration
+
+jubaer/zoom-laravel ^1.2
+
+Pusher
+
+^7.2
+
+Laravel Datatables
+
+~9.0
+
+Laravel UI
+
+^3.4
+
+🔐 Admin Panel Access
+A fully functional admin panel is included, allowing you to:
+
+Manage users (admins, tutors, students)
+
+Approve tutor applications
+
+Upload and manage courses
+
+Configure live classes via Zoom
+
+Set up and control payment gateways
+
+Manage SCORM content
+
+Configure platform-wide settings
+
+Note: Admin credentials are not included here. Please refer to internal documentation or contact the developer for access.
+
+📁 Key Directory Structure
+/app                  => Models, Controllers, Services
+/resources/views      => Blade frontend templates
+/routes/web.php       => Route definitions
+/public               => Public assets (CSS, JS, etc.)
+/database             => Migrations, seeders
+/storage              => Uploaded files, logs
+
+
+🤝 Closing Note
+This application has been crafted with scalability, performance, and extensibility in mind. It's ready for further development or production deployment as needed.
+
+If you encounter any issues or need enhancements, feel free to reach out.
+
+Best Regards,
+Athar
+Software Developer
