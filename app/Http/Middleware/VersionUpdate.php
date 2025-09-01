@@ -29,9 +29,7 @@ class VersionUpdate
             Artisan::call('config:clear');
             Artisan::call('cache:clear');
             Auth::logout();
-            if (!file_exists(storage_path('installed'))) {
-                return redirect()->to('/install');
-            }
+            
             return redirect()->route('version-update');
         }
         return $next($request);

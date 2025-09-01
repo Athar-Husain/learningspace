@@ -21,14 +21,14 @@ class Organization
          * only instructor can access instructor panel
          */
 
-        if (file_exists(storage_path('installed'))) {
-            if (auth()->user()->role == USER_ROLE_ORGANIZATION && auth()->user()->organization->status == STATUS_APPROVED) {
-                return $next($request);
-            } else {
-                abort('403');
-            }
+        // if (file_exists(storage_path('installed'))) {
+        if (auth()->user()->role == USER_ROLE_ORGANIZATION && auth()->user()->organization->status == STATUS_APPROVED) {
+            return $next($request);
         } else {
-            return redirect()->to('/install');
+            abort('403');
         }
+        // } else {
+        //     return redirect()->to('/install');
+        // }
     }
 }
